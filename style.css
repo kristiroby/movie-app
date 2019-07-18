@@ -10,7 +10,7 @@ body {
     list-style-type: none;
     padding: 2em;
 }
-.category {
+.genre_category, .rating_category {
     display: none;
     list-style-type: none;
     padding: .5em;

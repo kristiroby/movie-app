@@ -9,11 +9,14 @@
     
 </head>
 <body>
-
+    <form>
+        <input type="text" placeholder="year" class="textbox"/>
+        <input type="submit" value="Get Movie List"/>
+    </form> 
     <nav id="nav"> 
         <ul class="sort">
             <li class="list"> Rating
-                <ul class="category"> 
+                <ul class="rating_category"> 
                     <li id="R" name="R">R</li>
                     <li id="PG-13" name="PG-13">PG-13</li>
                     <li id="PG" name="PG">PG</li>
@@ -21,7 +24,7 @@
                 </ul> 
             </li>
             <li class="list"> Genre
-                <ul class="category">
+                <ul class="genre_category">
                     <li id="28" name="Action">Action</li>
                     <li id="12"name="Adventure">Adventure</li>
                     <li id="16"name="Animation">Animation</li>
@@ -41,8 +44,8 @@
         </ul> 
     </nav>
      
+    <div id="movieslist"></div> 
 
-    <div id="movieslist"></div>  
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
