@@ -1,47 +1,52 @@
 $(() => {
     let $genre = "";
     let $rating = "";
-    //show drop downs
+    const $summary = $('<h5>').text('Click for summary')
+    //show drop down
     $('.list').on('click', (event) => {
         $(event.target).find('.rating_category').show();
     })
-    //get $rating $(event.target).attr('id') and hide drop downs
+    //get rating and hide drop downs
     $('.rating_category').on('click', (event) => {
         $(event.target).siblings().hide();
         $rating = $(event.target).attr('id');
     })
-    //get $rating $(event.target).attr('id') and hide drop downs
+    //show drop down
     $('.list').on('click', (event) => {
         $(event.target).find('.genre_category').show();
     })
+    //get genre and hide drop downs
     $('.genre_category').on('click', (event) => {
         $(event.target).siblings().hide();
-        //TO-DO ************ change rating/genre to selection 
-        //$(event.currentTarget).parent().text) = 
-        //console.log('name is ' + $(event.target).attr('name'));
         $genre = $(event.target).attr('id');
     })    
+    //create movie list
     const $movies = $('<ul>');
     $movies.addClass('movies')
     $('#movieslist').append($movies);
-
+    //click movie list, clear list of movies, add year
     $('form').on('submit', (event) => {
         $movies.empty();
         event.preventDefault();
         const $year = ($('input[type="text"]').val());
-        
+    //api call with user selected genre rating and year    
     $.ajax({
         url: "https://api.themoviedb.org/3/discover/movie?api_key=384794ce6f644a69db436d8258dc9352&language=en-US&sort_by=vote_average.desc&certification_country=US&include_adult=false&include_video=false&page=1&year=" + $year + "&certification=" + $rating + "&with_genres=" + $genre,
-        data: {
-            // eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzODQ3OTRjZTZmNjQ0YTY5ZGI0MzZkODI1OGRjOTM1MiIsInN1YiI6IjVkMzA5MTg2MmY4ZDA5NDUyMmQyNTRiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6A12R5YKKFQe8v8CTLy0UaG5gnBJdBjL9_Ql_-4hK7Q
-        }
+    //show list of movies
     }).then(
         (data) => {
             for (let i = 0; i < data.results.length; i++) {
+                $movies.prepend($summary)
                 const $title = $('<li>').text(data.results[i].title).addClass('title')
                 $movies.append($title)
-                //console.log(data.results[i].title)
-            }
+            
+            $title.on('click', (event) => {
+                let $index = $(event.target).index()
+                console.log($index)
+                let $plot = data.results[$index].overview
+                alert($plot)
+            })
+        }
         },
         (error) => {
             console.log(error)
