@@ -16,6 +16,8 @@ form {
     line-height: 3em;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
 }
 .nav {
     width:100%;
@@ -87,6 +89,54 @@ li:hover {
     #year {
         margin: 0 40px 0 10px;
         width: 4em;
+        font-size: 18px;
+    }
+}
+@media (min-width:600px) {
+    #movieslist {
+        text-align: center;
+        padding: 1em;
+    }
+}
+@media (min-width:600px) {
+    #submit {
+        font-size: 18px;
+    }
+}
+.movies {
+    list-style-type: none;   
+} 
+.title:hover {
+    background-color: #e5e5e5;
+}
+#year {
+    border: 1px solid black;
+    margin: 0 20px 0 0 ;
+}
+#submit {
+    border:1px solid black;
+    cursor: pointer;
+}
+p {
+    text-align: center;
+}
+
+@media (min-width:600px) {
+    .sort  {
+        justify-content: center;
+    }
+}
+@media (min-width:600px) {
+    .list {
+        list-style-type: none;
+        margin: 0 1.5em;
+        font-size: 18px;
+    }
+}
+@media (min-width:600px) {
+    #year {
+        margin: 0 40px 0 10px;
+        width: 6em;
         font-size: 18px;
     }
 }

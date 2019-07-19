@@ -59,14 +59,3 @@ $(() => {
 
 });
 })
-// });
-        // $('#title').html(data.title);
-                // $('#year').html(data.release_date);
-                //$('#rated').html(data.Rated);
-            // for (var i = 0; i < $numberOfRecords; i++) {
-            //     const $li = $('<li>').text(data[i].descriptor).addClass('descriptor')
-            //     const $res = $('<li>').text(data[i].resolution_description).addClass('resolution')
-            //     $complaints.append($li)
-            //     $li.append($res)
-            //     const $resolutionBtn = $('<button>').text('What did the police do?').addClass('police')
-            //     $li.append($resolutionBtn)
