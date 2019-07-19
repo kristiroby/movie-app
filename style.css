@@ -1,17 +1,57 @@
 body {
-    background-color: azure
+    background-color: azure;
 }
-.sort {
+h1 {
+    text-align: center;
+}
+form {
+    list-style-type: none;
+}
+#year {
+    width: 5em;
+}
+.sort  {
+    list-style-type: none;  
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
 }
 .list {
     cursor: pointer;
     list-style-type: none;
-    padding: 2em;
 }
 .genre_category, .rating_category {
     display: none;
     list-style-type: none;
     padding: .5em;
+}
+.movies {
+    list-style-type: none;
+} 
+
+@media (min-width:600px) {
+    .sort  {
+        justify-content: center;
+    }
+}
+@media (min-width:600px) {
+    .list {
+        list-style-type: none;
+        margin: 0 1.5em;
+    }
+}
+@media (min-width:600px) {
+    #year {
+        margin: 0 2em;
+        width: 6em;
+        line-height: 1.5em;
+        border:1px solid black;
+    }
+}
+@media (min-width:600px) {
+    #movieslist {
+        text-align: center;
+        padding: 1em;
+    }
 }

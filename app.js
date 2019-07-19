@@ -7,7 +7,7 @@ $(() => {
     })
     //get $rating $(event.target).attr('id') and hide drop downs
     $('.rating_category').on('click', (event) => {
-        $(event.target).parent().hide();
+        $(event.target).siblings().hide();
         $rating = $(event.target).attr('id');
     })
     //get $rating $(event.target).attr('id') and hide drop downs
@@ -15,16 +15,18 @@ $(() => {
         $(event.target).find('.genre_category').show();
     })
     $('.genre_category').on('click', (event) => {
-        $(event.target).parent().hide();
+        $(event.target).siblings().hide();
         //TO-DO ************ change rating/genre to selection 
         //$(event.currentTarget).parent().text) = 
         //console.log('name is ' + $(event.target).attr('name'));
         $genre = $(event.target).attr('id');
     })    
     const $movies = $('<ul>');
+    $movies.addClass('movies')
     $('#movieslist').append($movies);
 
     $('form').on('submit', (event) => {
+        $movies.empty();
         event.preventDefault();
         const $year = ($('input[type="text"]').val());
         
