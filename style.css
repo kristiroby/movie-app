@@ -24,15 +24,16 @@ form {
 }
 li {
     cursor: pointer;
+    padding: .5em;
+}
+li:hover {
+    background-color: #e5e5e5
 }
 .row:hover {
-    background-color: #e5e5e5
+    background-color: #767474
 }
 .list {
     list-style-type: none;
-}
-#header {
-    cursor: pointer;
 }
 .genre_category, .rating_category {
     position: relative;
@@ -55,8 +56,7 @@ li {
     cursor: pointer;
 }
 p {
-    display: flex;
-    align-items: flex-end;
+    text-align: center;
 }
 
 @media (min-width:600px) {
