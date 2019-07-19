@@ -22,18 +22,38 @@ form {
     justify-content: space-evenly;
     margin: 0 auto;
 }
+li {
+    cursor: pointer;
+}
+.row:hover {
+    background-color: #e5e5e5
+}
 .list {
     list-style-type: none;
 }
+#header {
+    cursor: pointer;
+}
 .genre_category, .rating_category {
+    position: relative;
     display: none;
     list-style-type: none;
     padding: .5em;
 }
 .movies {
-    list-style-type: none;
-    
+    list-style-type: none;   
 } 
+.title:hover {
+    background-color: #e5e5e5;
+}
+#year {
+    border: 1px solid black;
+    margin: 0 20px 0 0 ;
+}
+#submit {
+    border:1px solid black;
+    cursor: pointer;
+}
 
 @media (min-width:600px) {
     .sort  {
@@ -49,10 +69,9 @@ form {
 }
 @media (min-width:600px) {
     #year {
-        margin: 0 2em;
+        margin: 0 40px 0 10px;
         width: 6em;
         font-size: 18px;
-        border:1px solid black;
     }
 }
 @media (min-width:600px) {
@@ -64,6 +83,5 @@ form {
 @media (min-width:600px) {
     #submit {
         font-size: 18px;
-        border:1px solid black;
     }
 }
