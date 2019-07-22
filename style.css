@@ -1,15 +1,22 @@
 body {
-    background-color: azure;
+    background-color: #e7f5ff;
 }
 h1 {
     text-align: center;
     font-family: 'Lato', sans-serif;
+    color: #e9f4ff;
 }
 h3 {
+    color: #e9f4ff;
     text-align: center;
     margin: 0 0 2em 0;
     font-style: italic;
     font-family: 'Lato', sans-serif;
+}
+#head {
+    background-color: #023957;
+    padding: 1.5em;
+    border-radius: 3px;
 }
 form {
     font-family: 'Lato', sans-serif;
@@ -26,6 +33,13 @@ form {
 #year {
     width: 5em;
     line-height: 18px;
+    background-color: #f2faff;
+    display: absolute;
+    border: 2px solid black;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 0 20px 0 0 ;
+    border-radius: 5px;
 }
 .sort  {
     list-style-type: none;  
@@ -33,90 +47,106 @@ form {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    margin: 0 .5em;
+    margin: 0 1em;
     font-size: 14px;
     font-family: 'Lato', sans-serif;
+    padding: 1em;
+}
+#genre_head {
+    border: 2px solid black;
+    background-color: #f2faff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#rating_head {
+    border: 2px solid black;
+    background-color: #f2faff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 .genre_category {
     position: relative;
     display: none;
     list-style-type: none;
     padding: 0 .5em;
+    border: 2 px solid black;
 }
 .rating_category {
     position: relative;
     display: none;
     list-style-type: none;
     padding: 0 .5em;
+    border: 2 px solid black;
+}
+li {
+    list-style-type: none;
+    padding: 3px;
 }
 .movies {
     list-style-type: none;   
 } 
-#year {
-    display: absolute;
-    border: 1px solid black;
-    font-size: 14px;
-}
 #submit {
-    border:1px solid black;
+    border:2px solid black;
     cursor: pointer;
     font-size: 14px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #f2faff;
+}
+.title {
+    font-size: 20px;
+    padding: 0 0 .75em 0;
 }
 #close {
     display: flex;
-    justify-content: flex-end;
-    padding: 1em;
+    padding: .75em;
+    margin: 1em 0 0 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #023957;
+    color: #f2faff
 }
 #modal-text {
     padding: 2em;
     font-family: 'Lato', sans-serif;
+    background-color: #ddecfa;
+	height: 350px;
+	width: 550px;
+    margin: 150px auto;
+    overflow-y: auto;
 }
 p {
     text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #e9f4ff;
+    background-color: #023957;
+    padding: 1em;
+    border-radius: 3px;
 }
 li:hover {
     cursor: pointer;
-    font-style: italic;
 }
 .row:hover {
-    background-color: #e5e5e5;
+    background-color: #ddecfa;
 }
 #modal {
     display: none;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 1;
-    overflow: auto;
-}
-#modal-text {
-    background-color: white;
-	height: 350px;
-	width: 550px;
-    border-radius: 2px;
-    margin: 150px auto;
+    overflow-y: auto;
 }
 .movies {
     list-style-type: none;
     font-family: 'Lato', sans-serif;
 } 
-.title:hover {
-    background-color: #e5e5e5;
-}
-#year {
-    border: 1px solid black;
-    margin: 0 20px 0 0 ;
-}
-#submit {
-    border:1px solid black;
-    cursor: pointer;
-}
-p {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
+a {
+    color: #e9f4ff;
 }
 @media (min-width:600px) {
     .sort  {

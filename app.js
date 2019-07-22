@@ -1,7 +1,7 @@
 $(() => {
     let $genre = "";
     let $rating = "";
-    const $summary = $('<h5>').text('Click for summary');
+    const $summary = $('<h4>').text('click title for plot summary');
     const $modal = $('#modal');
     const $closeBtn = $('#close');
     //show drop down
@@ -29,6 +29,8 @@ $(() => {
     //click movie list, clear list of movies, add year
     $('form').on('submit', (event) => {
         $movies.empty();
+        $('.genre_category').hide();
+        $('.rating_category').hide();
         event.preventDefault();
         const $year = ($('input[type="text"]').val());
         //api call with user selected genre rating and year    
@@ -48,6 +50,9 @@ $(() => {
                         let $plot = data.results[$index - 1].overview
                         $modal.css('display', 'block');
                         $('#modal-text').append($plot);
+                        $('#modal-text').prepend($title);
+                        $('#modal-text').append($closeBtn);
+                        
                     })
                 }
             },
