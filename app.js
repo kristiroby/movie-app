@@ -49,19 +49,20 @@ $(() => {
                         let $index = $(event.target).index()
                         let $plot = data.results[$index - 1].overview
                         $modal.css('display', 'block');
+                        $('#modal-text').append($title);
                         $('#modal-text').append($plot);
-                        $('#modal-text').prepend($title);
                         $('#modal-text').append($closeBtn);
-                        
+                        const closeModal = () => {
+                            $modal.css('display', 'none');
+                            $('#modal-text').empty();
+                        }
+                        $closeBtn.on('click', closeModal);
                     })
                 }
             },
         (error) => {
             console.log(error)
         })
-        const closeModal = () => {
-            $modal.css('display', 'none');
-        }
-        $closeBtn.on('click', closeModal);
+        
     })
 })
