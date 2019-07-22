@@ -18,6 +18,13 @@ h3 {
     padding: 1.5em;
     border-radius: 3px;
 }
+h4 {
+    background-color: #023957;
+    color: #e9f4ff;
+    padding: 8px 0;
+    width: 100%;
+    border-radius: 5px;
+}
 form {
     font-family: 'Lato', sans-serif;
     line-height: 3em;
@@ -32,7 +39,7 @@ form {
 }
 #year {
     width: 5em;
-    line-height: 18px;
+    line-height: 28px;
     background-color: #f2faff;
     display: absolute;
     border: 2px solid black;
@@ -55,13 +62,13 @@ form {
 #genre_head {
     border: 2px solid black;
     background-color: #f2faff;
-    padding: 5px 10px;
+    padding: 5px 10px 0 10px;
     border-radius: 5px;
 }
 #rating_head {
     border: 2px solid black;
     background-color: #f2faff;
-    padding: 5px 10px;
+    padding: 5px 10px 0 10px;
     border-radius: 5px;
 }
 .genre_category {
@@ -80,7 +87,7 @@ form {
 }
 li {
     list-style-type: none;
-    padding: 3px;
+    padding: 2px;
 }
 .movies {
     list-style-type: none;   
@@ -90,7 +97,7 @@ li {
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 8px 10px;
     background-color: #f2faff;
 }
 .title {
