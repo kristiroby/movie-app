@@ -40,18 +40,24 @@ $(() => {
         }).then(
             (data) => {
                 for (let i = 0; i < data.results.length; i++) {
+                    //click for summary text
                     $movies.prepend($summary)
+                    //display list of movies
                     const $title = $('<li>').text(data.results[i].title).addClass('title')
                     $movies.append($title)
                     $title.addClass("row")
-                    //clicking title opens descrription in a modal        
+                    //clicking title opens description in a modal        
                     $title.on('click', (event) => {
+                        //get summary for specific movie
                         let $index = $(event.target).index()
                         let $plot = data.results[$index - 1].overview
+                        //show modal
                         $modal.css('display', 'block');
+                        //show title, summary, and close button in modal
                         $('#modal-text').append($title);
                         $('#modal-text').append($plot);
                         $('#modal-text').append($closeBtn);
+                        //close button emptys box in case user chooses another movie from list
                         const closeModal = () => {
                             $modal.css('display', 'none');
                             $('#modal-text').empty();
@@ -60,9 +66,9 @@ $(() => {
                     })
                 }
             },
-        (error) => {
-            console.log(error)
-        })
-        
+            (error) => {
+                console.log(error)
+            })
+
     })
 })

@@ -11,10 +11,12 @@
 </head>
 
 <body>
+    <!-- header -->
     <div id="head">
         <h1>Movie List</h1>
         <h3>the most popular movies - according to the internet</h3>
     </div>
+    <!-- sorting row -->
     <nav class="nav">
         <ul class="sort">
             <li class="list" id="rating_head"> Rating
@@ -43,7 +45,6 @@
                     <li class="row" id="37">Western</li>
                 </ul>
             </li>
-
             <li class="list">
                 <form>
                     <input class="list" id="year" type="text" placeholder="year" class="textbox" />
@@ -53,9 +54,9 @@
             </li>
         </ul>
     </nav>
-
+    <!-- list of movies returned -->
     <div id="movieslist"></div>
-
+    <!-- modal -->
     <div id="modal">
         <div id="modal-text">
         </div>
@@ -66,6 +67,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
+<!-- link to api -->
 <footer>
     <p>Powered by <a href="https://www.themoviedb.org/"> The Movie DB</a></p>
 </footer>
